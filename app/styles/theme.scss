@@ -1,0 +1,38 @@
+// variables
+@import './variables/colors';
+@import './variables/mixins';
+
+// theme styles files
+@import './xtras';
+@import './fonts';
+@import './typography';
+
+// custom css
+* {
+  font-family: $font-montserrat;
+}
+
+::selection {
+  color: $white !important;
+  background: rgba($theme-primary, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0d0d0d;
+  font-weight: 400;
+  @include scrollbarCustom;
+}
